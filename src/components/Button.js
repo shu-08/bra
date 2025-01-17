@@ -10,7 +10,7 @@ import axios from 'axios';
 
 // Sony IRCC APIに送信する関数
 const sendIRCC = async (irccCode, setStatus, setError) => {
-  const url = 'http://192.168.11.2/sony/ircc'; // IPアドレスを指定
+  const url = 'http://192.168.11.2/sony/ircc/'; // IPアドレスを指定
 
   const body = `
     <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
@@ -47,7 +47,7 @@ export default function ButtonComponent() {
 
   // アイコンがクリックされた時にログを出力するハンドラ
   const activateApp = async (uri, setStatus, setError) => {
-    const url = 'http://192.168.11.2/sony/appControl';  // Sony TVのIPアドレス
+    const url = 'http://192.168.11.2/sony/appControl/';  // Sony TVのIPアドレス
   
     const body = {
       method: 'setActiveApp',
